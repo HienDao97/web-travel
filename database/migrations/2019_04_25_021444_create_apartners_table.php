@@ -26,6 +26,7 @@ class CreateApartnersTable extends Migration
             $table->string('specialized')->nullable();
             $table->string('city');
             $table->string('experience')->nullable();
+            $table->mediumText('description')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
