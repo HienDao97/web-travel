@@ -1,0 +1,461 @@
+body{
+	background-color: #e8e8e8;
+}
+
+/*Header CSS*/
+
+.header-authenticate{
+	height: 36px; 
+	background-color: #3a5168;
+	position: relative;
+}
+
+.top-header{
+	height: 80px;
+	background-image: url("../img/topbar.png");
+	background-size: cover;
+	position: relative;
+	text-align: center;
+	line-height: 80px;
+	z-index: 2000;
+}
+
+.top-header-logo{
+	height: 60px;
+}
+
+.top-header-left{
+	position: absolute;
+	line-height: 0;
+	left: 10px;
+	bottom: 8px;
+}
+
+.top-header-option{
+	position: absolute;
+	line-height: 0;
+	right: 10px;
+	bottom: 8px;
+}
+
+.top-header-option-img{
+	height: 25px;
+}
+
+.header-menu{
+	margin-top: 1px;
+	background-color: #0a2541;
+	height: 40px;
+}
+
+.header-menu-home{
+	height: 27px;
+	margin-top: -3px;
+}
+
+.header-menu-active a span{
+	color: #409c55;
+}
+
+.menu-bar{
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 16px;
+}
+
+.menu-bar li{
+}
+
+.menu-bar li:hover a span{
+	color: #409c55;
+}
+
+.menu-bar li:hover .drop-down-menu{
+	display: block;
+}
+
+.header-menu li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 0 7px;
+	text-decoration: none;
+	line-height: 40px;
+	font-weight: 600;
+}
+
+.header-menu span{
+	color: #fff;
+}
+
+.drop-down-menu{
+	z-index: 9000;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #fff;
+	position: absolute;
+	display: none;
+}
+
+.drop-down-menu li{
+	display: block;
+	float: none;
+	background-color: #0a2541;
+	margin-top: 2px;	
+	min-width: 200px;
+}
+
+.drop-down-menu li:hover{
+	background-color: #409c55;
+	color: #fff;
+}
+
+.drop-down-menu-li-active{
+	background-color: #409c55!important;
+	color: #fff;
+}
+
+.drop-down-menu li a{
+	text-align: left;
+	padding: 0 10px;
+}
+
+
+
+/*Footer CSS*/
+
+.footer-menu{
+	margin-top: 10px;
+	background-color: #162e46;
+	height: 40px;
+}
+
+.footer-menu .menu-bar li:hover{
+	background-color: #409c55;
+	color: #fff;
+}
+
+.footer-menu li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 0 7px;
+	text-decoration: none;
+	line-height: 40px;
+	font-weight: 600;
+}
+
+.copyright{
+	font-size: 12px;
+	color: #fff;
+}
+
+.copyright a{
+	font-size: 12px;
+	color: #409c55;
+	text-decoration: none;
+}
+
+.footer-content{
+	background-color: #0a2541;
+}
+
+.footer-content .container{	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.footer-left{
+	display: inline-flex;
+	width: 25%;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-left img{
+	width: 100%;
+	object-fit: cover;
+	margin: 30px 0;
+}
+
+.footer-right{
+	display: inline-block;
+	width: 74%;
+}
+
+.footer-right p{
+	color: #fff;
+	width: 70%;
+	margin:auto;
+	text-align: center;
+}
+
+.footer-info{
+	margin: auto;
+	width: 70%;
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+}
+
+.footer-info div{
+	width: 50%;
+	text-align: left;
+}
+
+.footer-info p{
+	width: 100%;
+	color: #fff;
+	text-align: left;
+}
+
+.footer-menu-active a{
+	color: #409c55!important;
+}
+
+.menu-mobile-header{
+	display: none;
+}
+
+.mobile-menu-li{
+	display: none;
+}
+
+.mobile-row{
+	display: none;
+}
+
+.give-up-search-advance{
+	display: none;
+}
+
+.header-menu-button-left{
+	display: none;
+}
+
+.header-menu-button-right{
+	display: none;
+}
+
+.header-menu-button-right-active{
+	display: none;
+}
+
+.header-menu-button-left-active{
+	display: none;
+}
+
+.anti-scroll{
+	display: none;
+}
+
+.body-not-scroll{
+
+}
+
+@media screen and (max-width: 1025px) {
+	body{
+		padding-top: 50px;
+	}
+
+	.body-not-scroll{
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	.anti-scroll{
+		display: none;
+		background-color: #00000078;
+		height: 110vh;
+		width: 100vw;
+		z-index: 1500;
+		overflow: scroll;
+		position: fixed;
+		right: 0;
+		top: 50px;
+	}
+
+	.header-menu-button-left{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 5px;
+		color: #fff;
+	}
+
+	.header-menu-button-left-active{
+		position: absolute;
+		top: 0;
+		left: 5px;
+		color: #fff;
+		z-index: 3000;
+	}
+
+	.top-header .top-header-option{
+		display: none;
+	}
+
+	.mobile-menu-li{
+		display: block;
+	}
+
+	.menu-mobile-header .top-header-logo{
+		height: 60px !important;
+		margin-bottom: 20px;
+	}
+
+	.top-header{
+		position: fixed;
+		height: 50px;
+		line-height: 50px;
+		top: 0;
+		left: 0;
+		width: 100vw;
+	}
+
+	.top-header-logo{
+		height: 40px;
+	}
+
+	.header-menu{
+		height: 0;
+	}
+
+	.header-menu .container{
+		padding: 0;
+		margin: 0;
+	}
+
+	.menu-bar{
+		display: none; /*flex*/
+		flex-direction: column;
+		width: auto;
+		align-items: flex-start;
+		background-color: #0a2541;
+		padding: 0 10px;
+		z-index: 2000;
+		max-height: calc(100vh - 50px);
+		overflow: scroll;
+		position: fixed;
+		left: 0;
+		top: 50px;
+	}
+
+	.menu-bar li{
+		width: 100%;
+	}
+
+	.menu-bar li a{
+		min-width: 200px;
+		text-align: left;
+		padding: 10px;
+		font-weight: 400;
+	}
+
+	.menu-bar li:hover .drop-down-menu{
+		display: none;
+	}
+
+	.menu-bar li:first-child{
+		display: none;
+	}
+
+	.menu-mobile-header{
+		display: block;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #fff;
+	}
+
+	.menu-mobile-header:hover{
+		background-color: #0a2541 !important;
+	}
+
+	.menu-mobile-header a:not(:first-child){
+		display: inline-block !important;
+		min-width: 120px;
+		font-size: 9px;
+		margin: 0 5px;
+		border: solid 1px #fff;
+		width: calc((100% - 25px) / 2);
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	.menu-mobile-header a{
+		text-align: center !important;
+	}
+
+	.menu-mobile-header span{
+		padding: 0 10px;
+	}
+
+	.footer-left{
+		width: 0;
+	}
+
+	.footer-right{
+		width: 100%;
+	}
+
+	.footer-right p{
+		width: 100%;
+		padding: 0 5px;
+		text-align: left;
+	}
+
+	.footer-info{
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.footer-info div{
+		width: 100%;
+	}
+
+	.footer-menu:first-child{
+		display: none;
+	}
+
+	.footer-content{
+		padding: 10px 0;
+	}
+
+	
+}
+
+@media screen and (max-width: 800px){
+	.header-menu-button-right{
+		display: block;
+		position: absolute;
+		top: 0; 
+		right: 15px;
+		color: #fff;
+	}
+
+	.header-menu-button-right-active{
+		position: absolute;
+		top: 0; 
+		right: 15px;
+		color: #fff;
+	}
+	
+	
+
+	.title a{
+		font-size: 16px;
+	}
+
+	.new-sub-content .row div{
+		width: 100%;
+	}
+}
+

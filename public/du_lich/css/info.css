@@ -1,0 +1,70 @@
+#info table{
+	width: 100%;
+}
+
+h5{
+	text-align: center;
+	color: #1fa67b;
+	padding: 20px;
+}
+
+#info table th{
+	text-align: right;
+	padding: 5px 15px;
+	width: 200px;
+}
+
+#info table td input{
+	width: 100%;
+	text-align: left;
+}
+
+textarea{
+	height: 100px;
+}
+
+.avatar{
+	width: 100%;
+	border: solid 1px #999;
+    padding: 5px;
+}
+
+.avatar img{
+	width: 100%;
+	object-fit: cover;
+}
+
+.rate{
+	width: 20%;
+	margin-top: 15px;
+}
+
+.rate img{
+	width: 100%;
+	object-fit: cover;
+}
+
+.btn{
+	width: 100%;
+	margin-top: 15px;
+}
+
+.comment{
+	width: 100%;
+	padding: 0 20%;
+}
+
+.small-avatar{
+	margin-right: 20px;
+}
+
+.small-avatar img{
+	height: 40px;
+	width: 40px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.comment table{
+	margin-top: 15px;
+}

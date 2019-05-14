@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ở đây cho thuê hướng dẫn viên</title>
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- Custom fonts for this template -->
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="vendor/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/dist/assets/owl.theme.default.min.css">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/header-footer.css" rel="stylesheet">
+    <!-- ICON CSS -->
+    <link rel="stylesheet" href="font/flaticon.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="vendor/dist/owl.carousel.min.js"></script>
+
+    <!-- daterange -->
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+
+
+
+
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <!--        <div class="header-authenticate">
+            <div class="top-header-left">
+                <a href="tel:0987654321" style="color: white;" ><label class="flaticon-phone" style="cursor: pointer;">&nbsp 0987654321</label>  </a>
+            </div>
+            <div class="top-header-option">
+                <a href="#"><img class="top-header-option-img" src="./img/login.png"></a>
+                <a href="#"><img class="top-header-option-img" src="./img/login.png"></a>
+                <a href="#" style="color: white; margin-left: 5px;margin-right: 15px; font-size: 14px"><img class="top-header-option-img" src="./img/vietnam.svg" style="margin-right: 4px">Tiếng Việt</a>
+            </div>
+        </div> -->
+        <div class="top-header">
+            <a href="#"><img class="top-header-logo" src="./img/logo.png">
+            </a>
+        </div>
+        <div class="header-menu">
+            <div class="container">
+                <div class="row">
+                    <ul class="menu-bar">
+                        <li class="active">
+                            <a href="#"><span>TRANG CHỦ</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>ĐĂNG KÝ LÀM CỘNG TÁC VIÊN</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>ĐĂNG KÝ THỜI GIAN LÀM VIỆC</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>ĐĂNG NHẬP</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>THÔNG TIN CÁ NHÂN</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>THÔNG TIN ĐƠN HÀNG</span></a>
+                        </li>
+                    </ul>
+                    <div class="anti-scroll">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <content class="content">
+        <section id="login">
+            <div class="container">
+                <div class="row">
+                    <div class="form-wrap">
+                        <br>
+                        <h1>Đăng ký làm Cộng tác viên</h1>
+                        <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+                            <div class="form-group">
+                                <label for="id" style="font-weight: bold; color: #777777">Tên đăng nhập: </label>
+                                <input type="text" name="id" id="id" class="form-control " placeholder="Tên đăng nhập (*)" required>
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="key" style="font-weight: bold; color: #777777">Mật khẩu: </label>
+                                <input type="password" name="key" id="key" class="form-control" placeholder="Mật khẩu (*)" required>
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="key" style="font-weight: bold; color: #777777">Nhập lại mật khẩu: </label>
+                                <input type="password" name="key" id="key" class="form-control" placeholder="Nhập lại mật khẩu (*)" required>
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="key" style="font-weight: bold; color: #777777">Họ tên: </label>
+                                <input type="text" name="" id="key" class="form-control" placeholder="Họ tên (*)" required>
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="key" style="font-weight: bold; color: #777777">Email: </label>
+                                <input type="Email" name="key" id="key" class="form-control" placeholder="Email (*)" required>
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="key" style="font-weight: bold; color: #777777">Số điện thoại: </label>
+                                <input type="text" name="key" id="key" class="form-control" placeholder="Số điện thoại (*)" required>
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>
+                            <div class="form-group" >
+                                <label for="key" style="font-weight: bold; color: #777777">Ngày sinh: </label>
+                                <input type="date" placeholder="Ngày-tháng-năm sinh (*)" onClick="$(this).removeClass('placeholderclass')" class="dateclass placeholderclass form-control" id="ngaysinh" name="ngaysinh" required> 
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="key" style="font-weight: bold; color: #777777">Giới tính: </label>
+                                <select class="form-control" id="sel1" required>
+                                    <option selected disabled>-- Giới tính (*) --</option>
+                                    <option>Nam</option>
+                                    <option>Nữ</option>
+                                </select>
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="key" style="font-weight: bold; color: #777777">Năm kinh nghiệm - Chứng chỉ: </label>
+                                <input type="text" name="key" id="key" class="form-control" placeholder="Năm kinh nghiệm" required>
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="key" style="font-weight: bold; color: #777777">Chuyên ngành: </label>
+                                <input type="text" name="key" id="key" class="form-control" placeholder="Chuyên ngành" >
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="sel1" style="font-weight: bold; color: #777777">Thành phố: </label>
+                                <select class="form-control" id="sel1" required>
+                                    <option selected disabled>-- Thành phố bạn làm việc (*) --</option>
+                                    <option>Hà Nội</option>
+                                    <option>Hải Phòng</option>
+                                    <option>Đà Nẵng</option>
+                                    <option>Nha Trang</option>
+                                    <option>TP. Hồ Chí Minh</option>
+                                </select>
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="key" style="font-weight: bold; color: #777777">Giới thiệu: </label>
+                                <textarea placeholder="Giới thiệu về bản thân (*)" class="form-control" required></textarea>
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>
+                            </div>                                 
+                            <div class="loaiCTV">
+                                <label style="font-weight: bold; color: #777777">Loại cộng tác viên mà bạn muốn đăng ký:</label>
+                                <table>
+                                <tr>
+                                <td>
+                                <input type="checkbox" name="check-box" /> <span>Phiên dịch viên</span>
+                                </td>
+                                <td>
+                                <input type="checkbox" name="check-box" /> <span>Hướng dẫn viên</span>
+                                </td>
+                                <td>
+                                <input type="checkbox" name="check-box" /> <span>Dịch thương mại</span>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                <input type="checkbox" name="check-box" /> <span>Dịch văn bản</span>
+                                </td>
+                                <td>
+                                <input type="checkbox" name="check-box" /> <span>Đón tiễn bay</span>
+                                </td>
+                                </tr>
+                                </table>
+                                <div class="valid-feedback">Hợp lệ.</div>
+                                <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                                
+                            </div>                           
+                            <div class="avt" align="left">
+                              <div class="imageWrapper" style="margin: 10px 0 0 0;">
+                                <img class="image" src="" style="width: 200px">
+                              </div>
+                            <button class="file-upload">            
+                              <input type="file" class="file-input" required>Tải ảnh đại diện
+                              <div class="valid-feedback">Hợp lệ.</div>
+                              <div class="invalid-feedback">Điền đầy đủ thông tin.</div>                              
+                            </button>
+                            </div>                
+                            <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Đăng ký">
+                        </form>
+                        <a href="#" class="forget"">Đăng nhập nếu bạn đã có tài khoản</a>
+                        <br>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+
+    </content>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-menu">
+            <div class="container">
+                <div class="row">
+                    <ul class="menu-bar">
+                        <li><a href="#">GIỚI THIỆU</a>
+                        </li>
+                        <li><a href="#">HỖ TRỢ CỘNG TÁC VIÊN</a>
+                        </li>
+                        <li><a href="#">HƯỚNG DẪN ĐĂNG KÝ</a>
+                        </li>
+                        <li><a href="#">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-left">
+                    <a href="#"><img src="./img/logo-footer.png">
+                    </a>
+                </div>
+                <div class="footer-right">
+                    <p>Website này là nơi đăng tin BÁN & CHO THUÊ về nhà đất thổ cư Bất động sản hoàn toàn miễn phí.</p>
+                    <p>Người đăng hoàn toàn chịu trách nhiệm với khách hàng và trước pháp luật về nội dung mình đăng.</p>
+                    <p>Hình ảnh về nhà rao bán phải là ảnh thực tế.</p>
+                    <div class="footer-info">
+                        <div>
+                            <p>Điện thoại:</p>
+                            <p>Email: info@daitheky.net</p>
+                            <p>Skype:</p>
+                        </div>
+                        <div>
+                            <p>Địa chỉ: Tòa nhà Hồng Hà, 109 Trường Chinh, Đống Đa, Hà Nội</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-menu">
+            <div class="container" style="position: relative;">
+                <span class="copyright">Copyright © 2019 - <a href="#">daitheky.net</a></span>
+                <a href="#" style="color: white; font-size: 16px;position: absolute; top: 5px;right: 0px;"><img class="top-header-option-img" src="./img/vietnam.svg" style="margin-right: 4px">Tiếng Việt</a>
+                <!-- <a href="#" style="color: white; font-size: 16px;position: absolute; top: 5px;right: 0px;"><img class="top-header-option-img" src="./img/china.svg" style="margin-right: 4px">中文</a> -->
+                <!-- Nếu đang ở ngôn ngữ tiếng Việt thì hiện nút tiếng Trung, và ngược lại -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/header.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/login.js"></script>
+
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+</body>
+
+</html>
