@@ -2,11 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Apartner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Validator;
+use Intervention\Image\ImageManagerStatic as Image;
+use Illuminate\Support\Facades\Auth;
 
 class CtvController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('apartners.auth');
+    }
+
     /**
      * View register
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -75,5 +89,74 @@ class CtvController extends Controller
      */
     public function home(){
         return view('welcome');
+    }
+
+    /**
+     * Store apartner
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function storeRegister(Request $request){
+        $params = $request->all();
+;       try {
+            $validator = Validator::make($params, [
+                'username' => 'required|unique:apartners||max:255',
+                'email' => 'required|email|unique:apartners||max:255',
+                'password' => 'required|min:6|confirmed',
+                'password_confirmation' => 'required|min:6',
+                'phone' => 'required|min:11|numeric',
+                'city' => 'required',
+                'experience' => 'required|numeric',
+                'specialized' => 'required',
+                'description' => 'required',
+                'avatar' => 'required',
+                'sex' => 'required',
+                'avatar' => 'mimes:jpeg,jpg,png,gif|required|max:1000',
+                'name' => 'required|max:255'
+            ]);
+            if ($validator->fails()) {
+                return redirect()->back()->withInput()->withErrors($validator->messages());
+            }
+            if ($request->hasFile('avatar')) {
+                $img = $request->file('avatar')->getClientOriginalName();
+
+                $request->avatar->move('img/avatar', $img);
+                $params['avatar'] = $img;
+            }
+            $params['type_work'] = implode(",", $params['type_work']);
+            $params['password'] = bcrypt($params['password']);
+            $params['active'] = Apartner::UNAVTICE_STATUS;
+            Apartner::create($params);
+            return redirect()->back()->with("message_sucess", "Bạn đã đăng kí thành công chờ quản trị viên duyệt");
+        }
+        catch (\Exception $ex) {
+            Log::error('[Apartner] ' . $ex->getMessage());
+            return redirect()->back()->withInput()->with('messages', 'Something wrong');
+        }
+
+    }
+
+    /**
+     * Process login
+     *
+     * @param LoginRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function loginPost(Request $request)
+    {
+        $params = $request->all();
+        $validator = Validator::make($params, [
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()->withInput()->withErrors($validator->messages());
+        }
+        if (Auth::guard('apartners')->attempt(['username' => $request->username, 'password' => $request->password],$request->remember_me)) {
+            return redirect(route('ctv.info.view'));
+        } else {
+            return redirect()->back()->withInput()->with('login_error','Tài khoản hoặc mật khẩu không hợp lệ!' );
+        }
     }
 }

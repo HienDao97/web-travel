@@ -10,16 +10,30 @@
                     $currentRouteName = request()->route()->getName();
                 @endphp
                 @foreach($backendMenus as $menu)
-                    @if($menu['route_name'] == $currentRouteName)
-
-                        <li class="active">
-                            <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
-                        </li>
-                    @else
-                        <li>
-                            <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
-                        </li>
+                    @if(!empty(Auth::guard('apartners')->user()->id))
+                        @if(isset($menu['hidden']))
+                            @if($menu['hidden'] == 1)
+                                @php
+                                    $menu['hidden'] = 0;
+                                @endphp
+                            @else
+                                @php
+                                    $menu['hidden'] = 1;
+                                @endphp
+                            @endif
+                        @endif
                     @endif
+                    @if($menu['hidden'] == 1 || $menu['hidden'] == "")
+                        @if($menu['route_name'] == $currentRouteName)
+                            <li class="active">
+                                <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
+                            </li>
+                        @else
+                            <li>
+                                <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
+                            </li>
+                        @endif
+                        @endif
                 @endforeach
             </ul>
             <div class="anti-scroll">
