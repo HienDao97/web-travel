@@ -8,19 +8,36 @@
             <ul class="menu-bar">
                 @php
                     $currentRouteName = request()->route()->getName();
+                    //dd($backendMenus)
                 @endphp
                 @foreach($backendMenus as $menu)
-                    @if($menu['route_name'] == $currentRouteName)
-
-                        <li class="active">
-                            <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
-                        </li>
+                    @if(!empty(Auth::guard('apartners')->user()->id))
+                        @if($menu['show_login'] == 1)
+                            @if($menu['route_name'] == $currentRouteName)
+                                <li class="active">
+                                    <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
+                                </li>
+                            @else
+                                <li>
+                                    <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
+                                </li>
+                            @endif
+                        @endif
                     @else
-                        <li>
-                            <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
-                        </li>
+                        @if($menu['show_not_login'] == 1)
+                            @if($menu['route_name'] == $currentRouteName)
+                                <li class="active">
+                                    <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
+                                </li>
+                            @else
+                                <li>
+                                    <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
+                                </li>
+                            @endif
+                        @endif
                     @endif
                 @endforeach
+
             </ul>
             <div class="anti-scroll">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

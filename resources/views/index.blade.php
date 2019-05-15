@@ -9,6 +9,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <!-- Custom fonts for this template -->
 

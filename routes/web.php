@@ -18,11 +18,14 @@ Route::group(['middleware' => ['web'], 'prefix' => 'ctv'], function()
     Route::get('/forgot_password', 'CtvController@forgotPassword')->name('ctv.forgotPassword.view');
     Route::get('/register', 'CtvController@register')->name('ctv.register.view');
     Route::post('/store/register', 'CtvController@storeRegister')->name('ctv.register');
-    Route::group(['middleware' => ['auth']], function () {
+    Route::post('/store/login', 'CtvController@loginPost')->name('ctv.login');
+    Route::group(['middleware' => ['apartners.auth']], function () {
         Route::get('/info', 'CtvController@info')->name('ctv.info.view');
         Route::get('/order', 'CtvController@order')->name('ctv.order.view');
         Route::get('register-time', 'CtvController@registerTime')->name('ctv.register_time.view');
         Route::get('/change-password', 'CtvController@changePassword')->name('ctv.change_password.view');
+
+        Route::post('update-password', 'CtvController@updatePassword')->name('ctv.update_password');
     });
 });
 
