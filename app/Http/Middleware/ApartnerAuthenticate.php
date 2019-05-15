@@ -16,11 +16,11 @@ class ApartnerAuthenticate
      */
     public function handle($request, Closure $next)
     {
-        if (empty(Auth::guard('apartners')->check()))
+        if (Auth::guard('apartners')->check() == false)
         {
-            return $next($request);
-        } else{
             return redirect(route('ctv.login.view'));
+
         }
+        return $next($request);
     }
 }

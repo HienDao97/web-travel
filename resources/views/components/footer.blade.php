@@ -1,4 +1,18 @@
 <div class="footer-menu">
+    <div aria-hidden="false" aria-labelledby="mySmallModalLabel" role="dialog" class="modal fade in" id="detailModal" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="finishModalLabel" class="modal-title">Cập nhật dữ liệu</h4>
+                    <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                </div>
+                <div id='modal_content' class="modal-body">
+                    <button class="btn btn-success">Xác nhận</button>
+                    <button class="btn btn-danger">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <ul class="menu-bar">

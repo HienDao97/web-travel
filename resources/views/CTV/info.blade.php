@@ -7,27 +7,27 @@
             <div class="col-md-1"></div>
             <div class="col-md-2">
                 <div class="avatar">
-                    <img src="img/doctor-img2.png">
+                    <img src="{{ asset('du_lich/img/doctor-img2.png') }}">
                 </div>
                 <div class="row">
                     <div class="rate">
-                        <img  src="img/star.png">
+                        <img  src="{{ asset('du_lich/img/star.png') }}">
                     </div>
                     <div class="rate">
-                        <img  src="img/star.png">
+                        <img  src="{{ asset('du_lich/img/star.png') }}">
                     </div>
                     <div class="rate">
-                        <img  src="img/star.png">
+                        <img  src="{{ asset('du_lich/img/star.png') }}">
                     </div>
                     <div class="rate">
-                        <img  src="img/star.png">
+                        <img  src="{{ asset('du_lich/img/star.png') }}">
                     </div>
                     <div class="rate">
-                        <img  src="img/star.png">
+                        <img  src="{{ asset('du_lich/img/star.png') }}">
                     </div>
                 </div>
                 <button class="btn btn-success">Đổi avatar</button>
-                <button class="btn btn-success">Đổi mật khẩu</button>
+                <button class="btn btn-success"><a style="color: white" href="{{ route('ctv.change_password.view') }}">Đổi mật khẩu</a></button>
             </div>
             <div class="col-md-8">
                 <table>

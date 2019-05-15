@@ -24,6 +24,8 @@ Route::group(['middleware' => ['web'], 'prefix' => 'ctv'], function()
         Route::get('/order', 'CtvController@order')->name('ctv.order.view');
         Route::get('register-time', 'CtvController@registerTime')->name('ctv.register_time.view');
         Route::get('/change-password', 'CtvController@changePassword')->name('ctv.change_password.view');
+
+        Route::post('update-password', 'CtvController@updatePassword')->name('ctv.update_password');
     });
 });
 

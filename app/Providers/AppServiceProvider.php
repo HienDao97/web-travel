@@ -30,42 +30,48 @@ class AppServiceProvider extends ServiceProvider
                 'name' => 'TRANG CHỦ',
                 'route_name' =>  'ctv.home.view',
                 'sub' => [],
-                'hidden' => "",
+                'show_not_login' => 1,
+                'show_login' => 1
                 //'param' => ""
             ],
             [
                 'name' => 'ĐĂNG KÝ LÀM CỘNG TÁC VIÊN',
                 'route_name' => 'ctv.register.view',
                 'sub' => [],
-                'hidden' => 1,
+                'show_not_login' => 1,
+                'show_login' => 0
                 //'param' => ""
             ],
             [
                 'name' => 'ĐĂNG KÝ THỜI GIAN LÀM VIỆC',
                 'route_name' => 'ctv.register_time.view',
                 'sub' => [],
-                'hidden' => 0,
+                'show_not_login' => 0,
+                'show_login' => 1
                 //'param' => ""
             ],
             [
                 'name' => 'ĐĂNG NHẬP',
                 'route_name' => 'ctv.login.view',
                 'sub' => [],
-                'hidden' => 1,
+                'show_not_login' => 1,
+                'show_login' => 0
                 //'param' => ""
             ],
             [
                 'name' => 'THÔNG TIN CÁ NHÂN',
                 'route_name' => 'ctv.info.view',
                 'sub' => [],
-                'hidden' => 0,
+                'show_not_login' => 0,
+                'show_login' => 1
                 //'param' => ""
             ],
             [
                 'name' => 'THÔNG TIN ĐƠN HÀNG',
                 'route_name' => 'ctv.order.view',
                 'sub' => [],
-                'hidden' => 0,
+                'show_not_login' => 0,
+                'show_login' => 1
                 //'param' => (!empty(Auth::guard('apartners')->user()->id)) ? Auth::guard('apartners')->user()->id : ""
             ]
         ];

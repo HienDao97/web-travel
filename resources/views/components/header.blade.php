@@ -8,33 +8,36 @@
             <ul class="menu-bar">
                 @php
                     $currentRouteName = request()->route()->getName();
+                    //dd($backendMenus)
                 @endphp
                 @foreach($backendMenus as $menu)
                     @if(!empty(Auth::guard('apartners')->user()->id))
-                        @if(isset($menu['hidden']))
-                            @if($menu['hidden'] == 1)
-                                @php
-                                    $menu['hidden'] = 0;
-                                @endphp
+                        @if($menu['show_login'] == 1)
+                            @if($menu['route_name'] == $currentRouteName)
+                                <li class="active">
+                                    <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
+                                </li>
                             @else
-                                @php
-                                    $menu['hidden'] = 1;
-                                @endphp
+                                <li>
+                                    <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
+                                </li>
+                            @endif
+                        @endif
+                    @else
+                        @if($menu['show_not_login'] == 1)
+                            @if($menu['route_name'] == $currentRouteName)
+                                <li class="active">
+                                    <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
+                                </li>
+                            @else
+                                <li>
+                                    <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
+                                </li>
                             @endif
                         @endif
                     @endif
-                    @if($menu['hidden'] == 1 || $menu['hidden'] == "")
-                        @if($menu['route_name'] == $currentRouteName)
-                            <li class="active">
-                                <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
-                            </li>
-                        @else
-                            <li>
-                                <a href="{{ route($menu['route_name']) }}"><span>{{ $menu['name'] }}</span></a>
-                            </li>
-                        @endif
-                        @endif
                 @endforeach
+
             </ul>
             <div class="anti-scroll">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

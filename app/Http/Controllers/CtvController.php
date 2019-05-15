@@ -12,16 +12,6 @@ use Illuminate\Support\Facades\Auth;
 class CtvController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('apartners.auth');
-    }
-
-    /**
      * View register
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
@@ -52,7 +42,9 @@ class CtvController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function info(){
-        return view('CTV.info');
+        $id = Auth::guard("apartners")->user()->id;
+        $apartner = Apartner::where('id', $id)->first();
+        return view('CTV.info', compact('apartner'));
     }
 
     /**
@@ -157,6 +149,31 @@ class CtvController extends Controller
             return redirect(route('ctv.info.view'));
         } else {
             return redirect()->back()->withInput()->with('login_error','Tài khoản hoặc mật khẩu không hợp lệ!' );
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function updatePassword(Request $request){
+        $params = $request->all();
+        $validator = Validator::make($params, [
+            'password' => 'required|min:6|confirmed',
+            'password_confirmation' => 'required|min:6',
+            'old_password' => 'required'
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()->withInput()->withErrors($validator->messages());
+        }
+        $username = Auth::guard('apartners')->user()->username;
+        if(Auth::guard('apartners')->attempt(['username' => $username, 'password' => $request->old_password],$request->remember_me)){
+            $apartner = Apartner::where('id', Auth::guard('apartners')->user()->id)->first();
+            $apartner->password = bcrypt($params['password']);
+            $apartner->save();
+            return redirect()->back()->with("message_sucess", "Thay đổi mật khẩu thành công");
+        } else{
+            return redirect()->back()->withInput()->with('login_error','Mật khẩu của bạn chưa chính xác vui lòng nhập lại mật khẩu' );
         }
     }
 }
