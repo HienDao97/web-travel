@@ -101,7 +101,7 @@
 
     <content class="content">
         <div class="container" id="info">
-            <h5>Thông tin cá nhân</h5>
+            <h5>Chỉnh sửa thông tin cá nhân</h5>
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-2">
@@ -131,7 +131,7 @@
                     <table>
                         <tr>
                             <th>Họ và tên:</th>
-                            <td><input class="form-control" type="text" name="full-name" value="Nguyễn Nhật Lê Trà Mi" disabled></td>
+                            <td><input class="form-control" type="text" name="full-name" value="Nguyễn Nhật Lê Trà Mi"></td>
                         </tr>
                         <tr>
                             <th>Email:</th>
@@ -143,35 +143,47 @@
                         </tr>
                         <tr>
                             <th>Ngày tháng năm sinh:</th>
-                            <td><input class="form-control" type="text" name="date-of-birth" value="30/2/2000" disabled></td>
+                            <td><input class="form-control" type="date" name="date-of-birth" value="2018-07-22"></td>
                         </tr>
                         <tr>
                             <th>Giới tính:</th>
-                            <td><input class="form-control" type="text" name="sex" value="Nữ" disabled></td>
+                            <td>
+                                <select class="form-control">
+                                    <option selected="">Nữ</option>
+                                    <option>Nam</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <th>Loại cộng tác viên:</th>
-                            <td><input class="form-control" type="text" name="type" value="Đón tiễn bay" disabled></td>
+                            <td>
+                                <select class="form-control">
+                                    <option selected="">Đón tiễn bay</option>
+                                    <option>Phiên dịch</option>
+                                    <option>Hướng dẫn viên</option>
+                                    <option>Dịch thương mại</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <th>Năm kinh nghiệm:</th>
-                            <td><input class="form-control" type="text" name="experience" value="Hơn 5 năm" disabled></td>
+                            <td><input class="form-control" type="text" name="experience" value="Hơn 5 năm"></td>
                         </tr>
                         <tr>
                             <th>Chuyên ngành:</th>
-                            <td><input class="form-control" type="text" name="specialized" value="Du lịch" disabled></td>
+                            <td><input class="form-control" type="text" name="specialized" value="Du lịch"></td>
                         </tr>
                         <tr>
                             <th>Chứng chỉ:</th>
-                            <td><input class="form-control" type="text" name="specialized" value="là gì đó" disabled></td>
+                            <td><input class="form-control" type="text" name="specialized" value="là gì đó"></td>
                         </tr>
                         <tr>
                             <th>Thành phố:</th>
-                            <td><input class="form-control" type="text" name="city" value="Đà Nẵng" disabled></td>
+                            <td><input class="form-control" type="text" name="city" value="Đà Nẵng"></td>
                         </tr>
                         <tr>
                             <th>Giới thiệu:</th>
-                            <td><textarea class="form-control" placeholder="Mohamed Salah Ghaly là một cầu thủ bóng đá người Ai Cập hiện đang chơi ở vị trí tiền đạo cánh cho câu lạc bộ Liverpool và là thành viên của đội tuyển Ai Cập. Anh đã từng giành giải cầu thủ trẻ tài năng nhất năm châu Phi của CAF vào năm 2012" disabled></textarea>
+                            <td><textarea class="form-control" placeholder="Mohamed Salah Ghaly là một cầu thủ bóng đá người Ai Cập hiện đang chơi ở vị trí tiền đạo cánh cho câu lạc bộ Liverpool và là thành viên của đội tuyển Ai Cập. Anh đã từng giành giải cầu thủ trẻ tài năng nhất năm châu Phi của CAF vào năm 2012"></textarea>
                             </td>
                         </tr>
                     </table>
@@ -179,73 +191,9 @@
                 <div class="col-md-1"></div>
             </div>
         </div>
-        <div class="container">
-            <h5>Phản hồi khách hàng</h5>
-            <div class="comment-box">
-                <textarea placeholder="Bình luận" class="form-control" required></textarea>
-                <button class="btn btn-success">Bình luận</button>
-            </div>
-            <div class="comment">
-                <table>
-                    <tr>
-                        <th>
-                            <div class="small-avatar">
-                                <img src="img/doctor-img2.png">
-                            </div>
-                        </th>
-                        <th><a href="#"><b>Nguyễn Lê An</b></a></th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="form-control">Nhiệt tình, ok</td>
-                    </tr>
-                </table>
-
-                <table>
-                    <tr>
-                        <th>
-                            <div class="small-avatar">
-                                <img src="img/doctor-img2.png">
-                            </div>
-                        </th>
-                        <th><a href="#"><b>Nguyễn Lê An</b></a></th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="form-control">Trình độ chưa ổn</td>
-                    </tr>
-                </table>
-
-                <table>
-                    <tr>
-                        <th>
-                            <div class="small-avatar">
-                                <img src="img/doctor-img2.png">
-                            </div>
-                        </th>
-                        <th><a href="#"><b>Nguyễn Lê An</b></a></th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="form-control">Mohamed Salah Ghaly là một cầu thủ bóng đá người Ai Cập hiện đang chơi ở vị trí tiền đạo cánh cho câu lạc bộ Liverpool và là thành viên của đội tuyển Ai Cập. Anh đã từng giành giải cầu thủ trẻ tài năng nhất năm châu Phi của CAF vào năm 2012</td>
-                    </tr>
-                </table>
-
-                <table>
-                    <tr>
-                        <th>
-                            <div class="small-avatar">
-                                <img src="img/doctor-img2.png">
-                            </div>
-                        </th>
-                        <th><a href="#"><b>Nguyễn Lê An</b></a></th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="form-control">Nhiệt tình, ok</td>
-                    </tr>
-                </table>
-            </div>
+        <div class="btn-row">
+            <button class="btn btn-success">Lưu</button>
+            <button class="btn btn-danger">Hủy</button>
         </div>
     </content>
 
