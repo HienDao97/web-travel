@@ -26,12 +26,13 @@ textarea{
 .avatar{
 	width: 100%;
 	border: solid 1px #999;
-    padding: 5px;
+    background-size: cover;
 }
 
-.avatar img{
-	width: 100%;
-	object-fit: cover;
+.avatar:before{
+	content: "";
+	display: block;
+	padding-top: calc(100% * 4 / 3); 	/* initial ratio of 1:1*/
 }
 
 .rate{
@@ -44,9 +45,30 @@ textarea{
 	object-fit: cover;
 }
 
-.btn{
+#info .btn{
 	width: 100%;
 	margin-top: 15px;
+}
+
+.comment-box{
+	width: 100%;
+	padding: 0 20%;
+}
+
+.comment-box textarea{
+	margin: 15px 0;
+}
+
+.btn-row{
+	width: 100%;
+	padding: 0 20%;
+	text-align: center;
+	background-color: #fff;
+	padding: 15px;
+}
+
+.btn-row .btn{
+	min-width: 120px;
 }
 
 .comment{
@@ -56,6 +78,8 @@ textarea{
 
 .small-avatar{
 	margin-right: 20px;
+	border: solid 1px #777;
+	border-radius: 50%;
 }
 
 .small-avatar img{
